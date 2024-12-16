@@ -1,21 +1,34 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 </head>
-<body>
 
-<div id="container"></div>
+<body style="margin:0;padding:0;">
 
-<script>
-    window.RufflePlayer = window.RufflePlayer || {};
-    window.addEventListener("load", (event) => {
-        const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
-        const container = document.getElementById("container");
-        container.appendChild(player);
-        player.ruffle().load("rosecamelliaeng_spanish.swf");
-    });
-</script>
-<script src="./ruffle/ruffle.js"></script>
+    <!--
+    <object>
+        <embed src="rosecamelliaeng_spanish.swf" width="500" height="400" />
+    </object>
+-->
+
+    <div id="container"></div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container");
+            player.style.width = "100vw";
+            player.style.height = "100vh";
+            container.appendChild(player);
+            player.ruffle().load("rosecamelliaeng_spanish.swf");
+        });
+    </script>
+
+    <script src="./ruffle/ruffle.js"></script>
 
 </body>
+
 </html>
